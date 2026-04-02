@@ -33,6 +33,7 @@
             txtPW = new TextBox();
             btnLogin = new Button();
             lblErrorMsg = new Label();
+            visiblePW = new CheckBox();
             SuspendLayout();
             // 
             // lblAppName
@@ -95,11 +96,23 @@
             lblErrorMsg.Text = "아이디 또는 비밀번호가 잘못 되었습니다.";
             lblErrorMsg.Visible = false;
             // 
+            // visiblePW
+            // 
+            visiblePW.AutoSize = true;
+            visiblePW.Location = new Point(270, 235);
+            visiblePW.Name = "visiblePW";
+            visiblePW.Size = new Size(102, 19);
+            visiblePW.TabIndex = 5;
+            visiblePW.Text = "비밀번호 표시";
+            visiblePW.UseVisualStyleBackColor = true;
+            visiblePW.CheckedChanged += visiblePW_CheckedChanged;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(384, 362);
+            Controls.Add(visiblePW);
             Controls.Add(lblErrorMsg);
             Controls.Add(btnLogin);
             Controls.Add(txtPW);
@@ -118,5 +131,6 @@
         private TextBox txtPW;
         private Button btnLogin;
         private Label lblErrorMsg;
+        private CheckBox visiblePW;
     }
 }

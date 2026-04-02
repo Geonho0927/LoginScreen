@@ -1,3 +1,5 @@
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
+
 namespace LoginScreen
 {
     public partial class Form1 : Form
@@ -22,7 +24,14 @@ namespace LoginScreen
             {
                 txtPW.Text = "";
                 txtPW.ForeColor = Color.Black;
-                txtPW.UseSystemPasswordChar = true;
+                if (visiblePW.Checked)
+                {
+                    txtPW.UseSystemPasswordChar = false;
+                }
+                else
+                {
+                    txtPW.UseSystemPasswordChar = true;
+                }
             }
         }
 
@@ -80,6 +89,18 @@ namespace LoginScreen
             {
                 e.SuppressKeyPress = true;
                 btnLogin.PerformClick();
+            }
+        }
+
+        private void visiblePW_CheckedChanged(object sender, EventArgs e)
+        {
+            if (visiblePW.Checked)
+            {
+                txtPW.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                txtPW.UseSystemPasswordChar = true;
             }
         }
     }
