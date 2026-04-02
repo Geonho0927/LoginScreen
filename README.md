@@ -18,6 +18,7 @@
 - 과제1 코드의 실행 스크린샷
 
 ![과제1 실행 화면](img/screen1.png)
+![과제1 실행 화면](img/screen2.png)
 
 - 과제 내용
 	- WinForms의 기본 컨트롤인 TextBox, Button, Label을 활용하여 로그인 화면 UI를 구성하였습니다.
